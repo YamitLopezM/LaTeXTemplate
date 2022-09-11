@@ -1,0 +1,44 @@
+\documentclass{scrartcl}
+
+% Algunas opcciones de la clase: font size (10pt, 11pt, 12pt), paper size and format (a4paper, letterpaper,...)
+% Draft mode (draft), Multiple columns (onecolumn, twocolumn), ... 
+
+%\usepackage{verbatim}  %comentarios de varias lineas entorno "comment"
+
+\usepackage[spanish, es-noshorthands]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{tikz}
+
+\usepackage{sagetex}
+
+
+\title{Guia: }
+\author{Yamit Lopez M}
+\date{\today}
+
+\begin{document}
+
+\begin{sagesilent}
+lista = open("./lista","r")
+alumnas = lista.readlines()
+lista.close()
+ejercicio = ""
+for i in range(0,len(alumnas)):
+    ejercicio += r"%s"%(alumnas[i])
+
+\end{sagesilent}
+
+
+Estas son las alumnas
+
+\sagestr{ejercicio}
+
+\section{A. Vivencia}
+\section{B. Fundamentaci\'on}
+\section{C. Ejercitaci\'on}
+\section{D. Aplicaci\'on}
+
+
+\end{document}
